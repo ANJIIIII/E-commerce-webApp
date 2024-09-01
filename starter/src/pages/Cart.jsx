@@ -16,11 +16,11 @@ useEffect(()=>{
   <div className="max-w-6xl p-2 mx-auto space-y-10 space-x-5 min-h-[80vh]">
     {
       cart.length > 0 ? 
-      (<div className="flex flex-row gap-5">
+      (<div className="grid md:grid-cols-2 grid-cols-1  max-w-[90%] mx-auto justify-between gap-x-6 gap-y-1 p-6">
 
 
 
-          <div >
+          <div>
             {
               cart.map((item,index)=>{
                 return <CartItem key={item.id} item={item} itenIndex={index} />
@@ -29,7 +29,7 @@ useEffect(()=>{
           </div>
           
 
-          <div className="flex flex-col justify-between h-screen p-0 m-0 ">
+          <div className="flex flex-col justify-between p-0 m-0 max-h-[420px] ">
            
             <div className="mt-[40px]">
               <div className="text-3xl text-green-600 md:font-bold-8">Your Cart</div>
@@ -38,7 +38,7 @@ useEffect(()=>{
               </p>
            </div>
 
-           <div className="mb-[120px]">
+           <div className="">
             <p className="text-slate text-xl">Total Amount : ${totalAmount}</p>
             <button className="text-slate-700 border-2 border-gray-700 rounded-lg font-bold 
           text-[17px] p-1 px-3 uppercase 

@@ -5,6 +5,7 @@ export const CartSlice= createSlice({
     name:"cart",
     initialState:[],
     reducers:{
+        //funtinality of website
         add:(state , action)=>{
             state.push(action.payload);
         },

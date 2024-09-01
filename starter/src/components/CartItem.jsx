@@ -11,15 +11,16 @@ const dispatch=useDispatch();
         dispatch(remove(item.id));
         toast.error("Item removed")
   }
+
   return( <div className="outline gap-3 p-4 mt-10 ml-5 rounded-xl  items-center justify-between ">
     <div className="flex flex-row gap-3 rounded-xl  justify-between ">
 
-     <div className="h-[200px] w-[400px]">
+     <div className="h-[150px] w-[300px]">
           <img src={item.image} className="h-full w-full"/>
         </div>
 
        <div className="flex flex-col gap-4">
-        <h1 className="text-slate text-3xl ">{item.title.split("").slice(0,40).join("")+"..."}</h1>
+        <h1 className="text-[#27704f] text-3xl ">{item.title.split("").slice(0,40).join("")+"..."}</h1>
         <p className="w-50 text-gray-400 font-normal text-[10px] text-left ">{item.description.split("").slice(0,1000).join("")+"..."}</p>
         <div className="flex flex-row justify-between">
           <p className="text-green-600 text-lg">{item.price}</p>
